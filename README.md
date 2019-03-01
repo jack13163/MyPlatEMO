@@ -1,2 +1,2 @@
 # MyPlatEMO
-Matlab环境下的改进PlatEMO
+改进PlatEMO
