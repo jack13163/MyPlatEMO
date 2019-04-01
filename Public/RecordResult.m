@@ -1,6 +1,10 @@
 function [ ] = RecordResult( Global )
-    % 声明静态变量
     persistent global_result;
+    
+    % 设置静态变量为空
+    if Global.evaluated <= Global.N
+        global_result = [];%第一次运行时，设置上次函数运行留下的persistent变量为空
+    end
     
     %% 判断目录是否存在
 	method = func2str(Global.algorithm);
@@ -34,7 +38,6 @@ function [ ] = RecordResult( Global )
             delete(filename2);
         end
         save(filename2,'global_result');
-        global_result = [];        %清除函数内部静态变量
         
         if exist(filename,'file')
             PF = load(filename);

@@ -35,14 +35,10 @@ function [  ] = Draw_bubble( data )
         hold on;
     end
     legend(legendtext);
-    title('Visible of Prato front');    
+    title('Visualization of Prato front');    
     range = [min(x), max(x), min(y), max(y), min(z), max(z)];
     axis(range);% 坐标轴的显示范围
-    xlabel('Pipeline mixing cost');% x轴名称、字体及大小
-    ylabel('Tank bottom mixing cost');% y轴名称、字体及大小
-    zlabel('Number of switchs');% z轴名称、字体及大小
-%    text(max(x), min(y), max(z),'气泡的面积越大，代表能耗越高','fontsize',12);
-%     colorbar;%显示colorbar
-%     caxis([6.5,10.5]);%设置colorbar的范围
-%     colormap(c);%设置colorbar的颜色
+    xlabel('J_\alpha');% x轴名称、字体及大小
+    ylabel('J_\beta');% y轴名称、字体及大小
+    zlabel('J_\gamma');% z轴名称、字体及大小
 end
